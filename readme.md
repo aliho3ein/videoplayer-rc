@@ -7,7 +7,7 @@ a Custom Videoplayer with :
 - fullscreen
 - Volume changer
 
-in this code get 
+in this code id 
 
 - Html 5 
 - Css- Sass
@@ -15,4 +15,4 @@ in this code get
 
 used .
 
-have Fun ;)
+**have Fun ;)**
