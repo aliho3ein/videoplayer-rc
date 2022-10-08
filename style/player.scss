@@ -1,0 +1,163 @@
+@import "./_variable.scss";
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+}
+
+.videoPlayer {
+  width: 800px;
+  height: 450px;
+  overflow: hidden;
+  background-color: black;
+  display: flex;
+  flex-flow: column;
+  margin-top: 20px;
+
+  &:hover .videoPlayer-controller {
+    margin-top: -55px;
+  }
+
+  &:hover .coBar {
+    width: 98%;
+    margin-left: 1%;
+  }
+
+  &-controller {
+    height: 60px;
+    width: 100%;
+    position: relative;
+    margin-top: -3px;
+    transition-duration: 0.5s;
+    justify-content: center;
+
+    &:hover .coBar {
+      height: 6px;
+    }
+
+    .coBar {
+      height: 3px;
+      width: 100%;
+      display: block;
+      background-color: #fff;
+      transition: all 0.2s;
+      position: absolute;
+    }
+    .coContent {
+      height: 55px;
+      width: 100%;
+      background-image: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(0, 0, 0, 0.7)
+      );
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+
+      .pause {
+        @include Pointer;
+        margin: 8px 10px 0px 30px;
+      }
+      .backward,
+      .forward {
+        @include Pointer;
+      }
+      #volume {
+        @include Pointer;
+        margin-left: auto;
+        cursor: default;
+        position: flex;
+        justify-content: center;
+        align-items: center;
+
+        .volume-range {
+          width: 0px;
+          height: 12px;
+          display: inline;
+          margin-left: 3px;
+          background: linear-gradient(to right, $primary-color 100%, #fff 0%);
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          border: none;
+          outline: none;
+          transition: all 450ms ease-in;
+          border-radius: 5px;
+          cursor: pointer;
+          &:focus {
+            outline: none;
+            border: none;
+          }
+        }
+        &:hover .volume-range {
+          width: 80px;
+          transition: all 0.5s ease-in-out;
+        }
+      }
+      .expand {
+        @include Pointer;
+        margin-right: 20px;
+      }
+
+      > span {
+        font-size: 1rem;
+        color: #fff;
+        margin: 8px 0px 0 10px;
+        cursor: default;
+      }
+      .cornet-time {
+        margin-left: 25px;
+      }
+    }
+  }
+}
+
+.coBar-rang {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 100%;
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  position: absolute;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+    border: none;
+  }
+}
+
+.coBar-rang::-moz-range-track {
+  border: none;
+  background: none;
+  outline: none;
+}
+.coBar-rang::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background-color: transparent;
+  height: 13px;
+  width: 13px;
+}
+.coBar-rang::-moz-range-thumb {
+  -moz-appearance: none !important;
+  background-color: transparent;
+  border: none;
+  height: 13px;
+  width: 13px;
+}
+
+.volume-range::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  height: 13px;
+  width: 13px;
+}
+.volume-range::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  height: 13px;
+  width: 13px;
+}
+.volume-range::-moz-range-track {
+  -webkit-appearance: none !important;
+}

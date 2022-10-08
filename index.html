@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://m.media-amazon.com/images/I/71vsYL0z+ML.png"
+    />
+    <title>Player</title>
+    <link rel="stylesheet" href="style/player.css" />
+  </head>
+  <body>
+    <div class="videoPlayer">
+      <video
+        src="https://aspb12.cdn.asset.aparat.com/aparat-video/8785b61bb456d8e7bfb70b5120b5456e14582643-1080p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjM4N2UzZjg4OTEwOGY4MDM2YjNiY2I4ODgyNDc4Y2YzIiwiZXhwIjoxNjY1MjU3ODYwLCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.7d7NRci3tPku_HAwlFeEmJtSg8ZIoCtHfcEfRCMosNY"
+        class="video"
+      ></video>
+      <!-- controls -->
+      <div class="videoPlayer-controller">
+        <div class="coBar">
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            step="1"
+            class="coBar-rang"
+          />
+        </div>
+        <div class="coContent">
+          <div class="pause fa fa-play"></div>
+          <!-- fa-pause -->
+          <div class="backward fa fa-backward"></div>
+          <div class="forward fa fa-forward"></div>
+          <span class="cornet-time">00:00</span>
+          <span>/</span>
+          <span class="video-time">00:00</span>
+          <div id="volume" class="fa fa-volume-high">
+            <input
+              type="range"
+              max="100"
+              min="0"
+              value="100"
+              class="volume-range"
+            />
+          </div>
+          <div class="expand fa fa-expand"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

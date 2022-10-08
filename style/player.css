@@ -1,0 +1,189 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+}
+
+.videoPlayer {
+  width: 800px;
+  height: 450px;
+  overflow: hidden;
+  background-color: black;
+  display: flex;
+  flex-flow: column;
+  margin-top: 20px;
+}
+.videoPlayer:hover .videoPlayer-controller {
+  margin-top: -55px;
+}
+.videoPlayer:hover .coBar {
+  width: 98%;
+  margin-left: 1%;
+}
+.videoPlayer-controller {
+  height: 60px;
+  width: 100%;
+  position: relative;
+  margin-top: -3px;
+  transition-duration: 0.5s;
+  justify-content: center;
+}
+.videoPlayer-controller:hover .coBar {
+  height: 6px;
+}
+.videoPlayer-controller .coBar {
+  height: 3px;
+  width: 100%;
+  display: block;
+  background-color: #fff;
+  transition: all 0.2s;
+  position: absolute;
+}
+.videoPlayer-controller .coContent {
+  height: 55px;
+  width: 100%;
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.videoPlayer-controller .coContent .pause {
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.1rem;
+  margin: 8px 0px 0px 20px;
+  transition: all 0.2s;
+  margin: 8px 10px 0px 30px;
+}
+.videoPlayer-controller .coContent .pause:hover {
+  color: rgb(245, 98, 25);
+}
+.videoPlayer-controller .coContent .backward,
+.videoPlayer-controller .coContent .forward {
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.1rem;
+  margin: 8px 0px 0px 20px;
+  transition: all 0.2s;
+}
+.videoPlayer-controller .coContent .backward:hover,
+.videoPlayer-controller .coContent .forward:hover {
+  color: rgb(245, 98, 25);
+}
+.videoPlayer-controller .coContent #volume {
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.1rem;
+  margin: 8px 0px 0px 20px;
+  transition: all 0.2s;
+  margin-left: auto;
+  cursor: default;
+  position: flex;
+  justify-content: center;
+  align-items: center;
+}
+.videoPlayer-controller .coContent #volume:hover {
+  color: rgb(245, 98, 25);
+}
+.videoPlayer-controller .coContent #volume .volume-range {
+  width: 0px;
+  height: 12px;
+  display: inline;
+  margin-left: 3px;
+  background: linear-gradient(to right, rgb(245, 98, 25) 100%, #fff 0%);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  outline: none;
+  transition: all 450ms ease-in;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.videoPlayer-controller .coContent #volume .volume-range:focus {
+  outline: none;
+  border: none;
+}
+.videoPlayer-controller .coContent #volume:hover .volume-range {
+  width: 80px;
+  transition: all 0.5s ease-in-out;
+}
+.videoPlayer-controller .coContent .expand {
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.1rem;
+  margin: 8px 0px 0px 20px;
+  transition: all 0.2s;
+  margin-right: 20px;
+}
+.videoPlayer-controller .coContent .expand:hover {
+  color: rgb(245, 98, 25);
+}
+.videoPlayer-controller .coContent > span {
+  font-size: 1rem;
+  color: #fff;
+  margin: 8px 0px 0 10px;
+  cursor: default;
+}
+.videoPlayer-controller .coContent .cornet-time {
+  margin-left: 25px;
+}
+
+.coBar-rang {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 100%;
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  position: absolute;
+  cursor: pointer;
+}
+.coBar-rang:focus {
+  outline: none;
+  border: none;
+}
+
+.coBar-rang::-moz-range-track {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.coBar-rang::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background-color: transparent;
+  height: 13px;
+  width: 13px;
+}
+
+.coBar-rang::-moz-range-thumb {
+  -moz-appearance: none !important;
+  background-color: transparent;
+  border: none;
+  height: 13px;
+  width: 13px;
+}
+
+.volume-range::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  height: 13px;
+  width: 13px;
+}
+
+.volume-range::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  height: 13px;
+  width: 13px;
+}
+
+.volume-range::-moz-range-track {
+  -webkit-appearance: none !important;
+}/*# sourceMappingURL=player.css.map */
